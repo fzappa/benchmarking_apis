@@ -39,8 +39,8 @@ This project benchmarks the performance of web frameworks in Python (FastAPI, Dj
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/fzappa/benchmarking_apis.git
+   cd benchmarking_api
    ```
 
 2. **Install Python Dependencies**
@@ -77,13 +77,12 @@ This project benchmarks the performance of web frameworks in Python (FastAPI, Dj
 
 ## Usage
 
-The project includes a Bash script (`run_test.sh`) to automate building, testing, and cleanup.
+The project includes a Bash script (`run.sh`) to automate building, testing, and cleanup.
 
 1. **Run the Full Test**
 
    ```bash
-   chmod +x run_test.sh
-   ./run_test.sh
+   bash run.sh
    ```
 
    This will:
