@@ -109,15 +109,15 @@ def main():
         if not is_endpoint_up(url):
             print(f"Warning: {api} endpoint {url} is not responding. Tests may fail.")
 
-    # If dados_wrk.json exists and --timestamp is not set,
+    # If data_wrk.json exists and --timestamp is not set,
     # load the data and generate the plot
-    if not args.timestamp and os.path.exists("dados_wrk.json"):
-        print("📊 Found dados_wrk.json file. Generating plot...")
-        with open("dados_wrk.json", "r") as f:
+    if not args.timestamp and os.path.exists("data_wrk.json"):
+        print("📊 Found data_wrk.json file. Generating plot...")
+        with open("data_wrk.json", "r") as f:
             data = json.load(f)
         connections = data["connections"]
         results = data["results"]
-        plot_results(connections, results, "resultado_benchmark_wrk.png")
+        plot_results(connections, results, "result_benchmark_wrk.png")
         return
 
     # Selected mode configurations
@@ -146,11 +146,11 @@ def main():
     # Define output file names based on --timestamp option
     if args.timestamp:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        json_file = f"wrk_data_{timestamp}.json"
-        plot_file = f"benchmark_wrk_result_{timestamp}.png"
+        json_file = f"data_wrk_{timestamp}.json"
+        plot_file = f"result_benchmark_wrk_{timestamp}.png"
     else:
-        json_file = "wrk_data.json"
-        plot_file = "benchmark_wrk_result.png"
+        json_file = "data_wrk.json"
+        plot_file = "result_benchmark_wrk.png"
 
     # Save data to JSON
     with open(json_file, "w") as f:
