@@ -134,7 +134,7 @@ After running the test, you’ll get:
 - A JSON file with connection counts and RPS results.
 
 Example plot:
-![Benchmark Result](benchmark_wrk_result.png)
+![Benchmark Result](result_benchmark_wrk.png)
 
 ## Contributing
 
