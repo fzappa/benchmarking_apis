@@ -1,0 +1,41 @@
+services:
+  fastapi:
+    build:
+      context: ./python_apps/fastapi_app
+      dockerfile: Dockerfile.fastapi
+    ports:
+      - "8001:8001"
+
+  drf:
+    build:
+      context: ./python_apps/drf_app
+      dockerfile: Dockerfile.drf
+    ports:
+      - "8002:8002"
+
+  ninja:
+    build:
+      context: ./python_apps/ninja_app
+      dockerfile: Dockerfile.ninja
+    ports:
+      - "8003:8003"
+
+  axum:
+    build:
+      context: ./rust_apps/rust_axum
+      dockerfile: Dockerfile.axum
+    ports:
+      - "3000:3000"
+  rocket:
+    build:
+      context: ./rust_apps/rust_rocket
+      dockerfile: Dockerfile.rocket
+    ports:
+      - "8000:8000"
+
+  actix:
+    build:
+      context: ./rust_apps/rust_actix
+      dockerfile: Dockerfile.actix
+    ports:
+      - "8080:8080"
